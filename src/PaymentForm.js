@@ -17,7 +17,7 @@ const PaymentForm = () => {
     }
 
     try {
-      const response = await axios.post('http://13.201.190.79:5000/api/payment/create-payment', {
+      const response = await axios.post('https://edvironassignment-1backend.onrender.com/api/payment/create-payment', {
         amount: amount
       });
 

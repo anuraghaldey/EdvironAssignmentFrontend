@@ -12,7 +12,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://13.201.190.79:5000/api/users/signup', {
+      const response = await axios.post('https://edvironassignment-1backend.onrender.com/api/users/signup', {
         username,
         email,
         password

@@ -153,7 +153,7 @@ color:"black"
     try {
       setLoading(true);
       setError(null);
-      const response = await axios.get('http://13.201.190.79:5000/api/order-status/', {
+      const response = await axios.get('https://edvironassignment-1backend.onrender.com/api/order-status/', {
         params: { ...filters, ...pagination }
       });
       console.log('API Response:', response.data);

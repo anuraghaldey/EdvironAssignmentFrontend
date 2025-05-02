@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://13.201.190.79:5000/api/users/login',
+        'https://edvironassignment-1backend.onrender.com/api/users/login',
         { email, password },
         { withCredentials: true }
       );

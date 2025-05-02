@@ -26,7 +26,7 @@ const Home = ({ darkTheme }) => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get('http://13.201.190.79:5000/api/orders/');
+        const response = await axios.get('https://edvironassignment-1backend.onrender.com/api/orders/');
         setOrders(response.data);
       } catch (error) {
         console.error('Failed to fetch orders:', error);
@@ -63,7 +63,7 @@ const Home = ({ darkTheme }) => {
   const handleOrderSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://13.201.190.79:5000/api/orders/create', orderFormData);
+      const response = await axios.post('https://edvironassignment-1backend.onrender.com/api/orders/create', orderFormData);
       alert('Order created successfully! Now fill the Transaction form.');
       const newOrderId = response.data._id;
       setTransactionData((prev) => ({
@@ -78,7 +78,7 @@ const Home = ({ darkTheme }) => {
         student_info: { name: '', id: '', email: '' },
       });
 
-      const res = await axios.get('http://13.201.190.79:5000/api/orders/');
+      const res = await axios.get('https://edvironassignment-1backend.onrender.com/api/orders/');
       setOrders(res.data);
 
     } catch (error) {
